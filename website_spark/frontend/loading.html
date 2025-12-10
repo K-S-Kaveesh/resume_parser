@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(-45deg, #a18cd1, #fbc2eb, #fad0c4, #ff9a9e);
+        background-size: 400% 400%;
+        animation: bgShift 12s ease infinite;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    /* Moving gradient animation */
+    @keyframes bgShift {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .redirect-box {
+        text-align: center;
+        background: rgba(255,255,255,0.2);
+        padding: 30px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+
+    .redirect-text {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .redirect-subtext {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="redirect-box">
+    <div class="redirect-text">Redirecting...</div>
+    <div class="redirect-subtext">Please wait while we process your request.</div>
+</div>
+
+<script>
+    // If someone lands on this page directly, redirect to index
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 2000);
+</script>
+
+</body>
+</html>
